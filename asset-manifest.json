@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/weather-search-sobkiv/static/css/main.a4f50006.css",
+    "main.js": "/weather-search-sobkiv/static/js/main.d5ddf450.js",
+    "static/js/496.13a9af09.chunk.js": "/weather-search-sobkiv/static/js/496.13a9af09.chunk.js",
+    "static/media/initial.jpg": "/weather-search-sobkiv/static/media/initial.8e2bd5cbef8d2c05851b.jpg",
+    "static/media/hot.jpg": "/weather-search-sobkiv/static/media/hot.a0ef7c2e7693c5f0af2f.jpg",
+    "static/media/cold.jpg": "/weather-search-sobkiv/static/media/cold.02dfb479e7f46b1be69e.jpg",
+    "static/media/normal.jpg": "/weather-search-sobkiv/static/media/normal.32ba5fb1abb2fc425fdb.jpg",
+    "index.html": "/weather-search-sobkiv/index.html",
+    "main.a4f50006.css.map": "/weather-search-sobkiv/static/css/main.a4f50006.css.map",
+    "main.d5ddf450.js.map": "/weather-search-sobkiv/static/js/main.d5ddf450.js.map",
+    "496.13a9af09.chunk.js.map": "/weather-search-sobkiv/static/js/496.13a9af09.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a4f50006.css",
+    "static/js/main.d5ddf450.js"
+  ]
+}
