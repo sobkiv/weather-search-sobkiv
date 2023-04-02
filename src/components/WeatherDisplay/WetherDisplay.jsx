@@ -1,10 +1,14 @@
-import React, { useEffect, useState } from 'react';
-import { Typography, CircularProgress } from '@mui/material';
-import fetchGeocodingData from '../../services/DataService/fetchGeocodingData';
-import fetchWeatherData from '../../services/DataService/fetchWeatherData';
+import React, { useEffect, useState } from "react";
+import { Typography, CircularProgress } from "@mui/material";
+import fetchGeocodingData from "../../services/DataService/fetchGeocodingData";
+import fetchWeatherData from "../../services/DataService/fetchWeatherData";
+import "./WeatherDisplay.css";
 
-function WeatherDisplay({ city }) {
+
+
+function WeatherDisplay({ city, onDegree }) {
   const [weatherData, setWeatherData] = useState(null);
+  
 
   useEffect(() => {
     fetchGeocodingData(city)
@@ -13,8 +17,9 @@ function WeatherDisplay({ city }) {
       })
       .then(({ data }) => {
         setWeatherData(data);
+        onDegree(data.main.temp);
       });
-  }, [city]);
+  }, [city, onDegree]);
 
   if (!weatherData) {
     return <CircularProgress />;
@@ -23,7 +28,7 @@ function WeatherDisplay({ city }) {
   const { name, main, weather } = weatherData;
 
   return (
-    <div>
+    <div className="list text">
       <Typography variant="h5">Weather in {name}</Typography>
       <Typography>Temperature: {main.temp}°C</Typography>
       <Typography>Humidity: {main.humidity}%</Typography>

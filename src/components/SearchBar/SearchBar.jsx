@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
-import { TextField, IconButton } from '@mui/material';
-import SearchIcon from '@mui/icons-material/Search';
+import React, { useState } from "react";
+import { TextField, IconButton } from "@mui/material";
+import SearchIcon from "@mui/icons-material/Search";
+import "./SearchBar.css";
 
 function SearchBar({ onSubmit }) {
-  const [city, setCity] = useState('');
+  const [city, setCity] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
     onSubmit(city);
-    setCity('');
+    setCity("");
   };
 
   const handleChange = (event) => {
@@ -16,16 +17,17 @@ function SearchBar({ onSubmit }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="form" onSubmit={handleSubmit}>
       <TextField
         id="city-input"
         label="Enter city name"
         variant="outlined"
+        underline="hover"
         value={city}
         onChange={handleChange}
       />
-      <IconButton type="submit">
-        <SearchIcon />
+      <IconButton type="submit" >
+        <SearchIcon className="button" />
       </IconButton>
     </form>
   );
